@@ -1,0 +1,235 @@
+<html>
+<head>
+	<title>Rinoceronte</title>
+</head>
+<body>
+    <body bgcolor="palegreen">
+
+ <style>
+h1 {color:darkblue;}
+ </style>
+ <center>
+
+<FONT SIZE="7" FACE="Verdana"><SPAN ID="s"  STYLE=" position:absolute; color:white">RINOCERONTE</SPAN>
+	<SPAN ID="s2" STYLE=" position:absolute; color:white">RINOCERONTE</SPAN>
+	<SPAN ID="s3" STYLE=" position:absolute; color:white">RINOCERONTE</SPAN>
+	<SPAN ID="ds" STYLE=" position:relative; "></SPAN>
+	</FONT>
+	
+	<FONT COLOR="#0000FF" SIZE="6" FACE="Verdana">RINOCERONTE</FONT>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+y=0
+x=2
+z=1
+function l(){
+y+=1
+x+=1
+z+=1
+document.all.s.style.color="green";
+document.all.s.style.margin=y;
+document.all.s3.style.color="yellow";
+document.all.s3.style.margin=z;
+document.all.s2.style.color="red";
+document.all.s2.style.margin=x;
+
+if (y>3){
+y=0}
+if (z>3){
+z=0}
+if (x>3){
+x=0}
+setTimeout("l(),1")
+}
+
+l()
+
+</SCRIPT>
+
+<font FACE="rockwell" SIZE="4.8">
+<p align="justify">Los rinocerótidos (Rhinocerotidae, del griego ρινός (rinós), 'nariz' y κερος (keros), 'cuerno'), conocidos con el nombre de rinocerontes, son una familia de mamíferos placentarios del suborden ceratomorfos perteneciente al orden de los perisodáctilos.
+Actualmente existen cinco especies: el rinoceronte blanco y el rinoceronte negro en África y el rinoceronte de Java, el rinoceronte de la India y el rinoceronte de Sumatra en Asia.</p>
+
+<p align="justify">Según la clasificación de estado de conservación confeccionada por la Unión Internacional para la Conservación de la Naturaleza, las especies de rinocerontes de Java, Sumatra y negro se encuentran en «peligro crítico»; el de la India se considera «vulnerable» y el blanco «casi amenazado». En español, además del término rinoceronte, existe la palabra abada para denominar a estos animales. Proveniente del portugués abada, que se usa para designar a la hembra del rinoceronte; actualmente su uso es limitado.</p>
+
+<h1><center><b><font size=7><script language="JavaScript1.2">
+
+//Neon Lights Text II by G.P.F. (gpf@beta-cc.de)
+//visit http://www.beta-cc.de
+//Visit http://www.dynamicdrive.com for this script 
+
+var message2="HABITAT"
+var neonbasecolor="WHITE"
+var neontextcolor="limegreen"
+var neontextcolor2="#32CD32"
+var flashspeed=100						// speed of flashing in milliseconds
+var flashingletters=3						// number of letters flashing in neontextcolor
+var flashingletters2=1						// number of letters flashing in neontextcolor2 (0 to disable)
+var flashpause=0						// the pause between flash-cycles in milliseconds
+
+///No need to edit below this line/////
+
+var n=0
+if (document.all||document.getElementById){
+document.write('<font color="'+neonbasecolor+'">')
+for (m=0;m<message2.length;m++)
+document.write('<span id="neonlight'+m+'">'+message2.charAt(m)+'</span>')
+document.write('</font>')
+}
+else
+document.write(message2)
+
+function crossref(number){
+var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+return crossobj
+}
+
+function neon(){
+
+//Change all letters to base color
+if (n==0){
+for (m=0;m<message2.length;m++)
+crossref(m).style.color=neonbasecolor
+}
+
+//cycle through and change individual letters to neon color
+crossref(n).style.color=neontextcolor
+
+if (n>flashingletters-1) crossref(n-flashingletters).style.color=neontextcolor2 
+if (n>(flashingletters+flashingletters2)-1) crossref(n-flashingletters-flashingletters2).style.color=neonbasecolor
+
+
+if (n<message2.length-1)
+n++
+else{
+n=0
+clearInterval(flashing)
+setTimeout("beginneon()",flashpause)
+return
+}
+}
+
+function beginneon(){
+if (document.all||document.getElementById)
+flashing=setInterval("neon()",flashspeed)
+}
+beginneon()
+
+
+</script></h1></b></FONT>
+
+<p align="justify">Los pocos ejemplares que quedan del rinoceronte blanco se encuentra distribuidos en África.</p>
+
+<p align="justify">Específicamente en Zimbabure y Kenia.</p>
+
+<p align="justify">Habitan las sabanas de África, aunque su territorio es reducido comparado con la de otras especies.</p>
+
+
+<script language="JavaScript1.2">
+
+/*
+Nudging text by Matthias (info@freejavascripts.f2s.com)
+Modified by Dynamic Drive to function in NS6
+For this script and more, visit http://www.dynamicdrive.com
+*/
+
+//configure message
+message="ALIMENTACIÓN"
+//animate text in NS6? (0 will turn it off)
+ns6switch=1
+
+var ns6=document.getElementById&&!document.all
+mes=new Array();
+mes[0]=-1;
+mes[1]=-4;
+mes[2]=-7;mes[3]=-10;
+mes[4]=-7;
+mes[5]=-4;
+mes[6]=-1;
+num=0;
+num2=0;
+txt="";
+function jump0(){
+if (ns6&&!ns6switch){
+jump.innerHTML=message
+return
+}
+if(message.length > 6){
+for(i=0; i != message.length;i++){
+txt=txt+"<span style='position:relative;' id='n"+i+"'>"+message.charAt(i)+"</span>"};
+jump.innerHTML=txt;
+txt="";
+jump1a()
+}
+else{
+alert("Your message is to short")
+}
+}
+
+function jump1a(){
+nfinal=(document.getElementById)? document.getElementById("n0") : document.all.n0
+nfinal.style.left=-num2;
+if(num2 != 9){
+num2=num2+3;
+setTimeout("jump1a()",50)
+}
+else{
+jump1b()
+}
+}
+
+function jump1b(){
+nfinal.style.left=-num2;
+if(num2 != 0){num2=num2-3;
+setTimeout("jump1b()",50)
+}
+else{
+jump2()
+}
+}
+
+function jump2(){
+txt="";
+for(i=0;i != message.length;i++){
+if(i+num > -1 && i+num < 7){
+txt=txt+"<span style='position:relative;top:"+mes[i+num]+"'>"+message.charAt(i)+"</span>"
+}
+else{txt=txt+"<span>"+message.charAt(i)+"</span>"}
+}
+jump.innerHTML=txt;
+txt="";
+if(num != (-message.length)){
+num--;
+setTimeout("jump2()",50)}
+else{num=0;
+setTimeout("jump0()",50)}}
+</script>
+</head>
+<body>
+
+<h1><div id="jumpx" style="color:RED"></div></h1>
+<script>
+if (document.all||document.getElementById){
+jump=(document.getElementById)? document.getElementById("jumpx") : document.all.jumpx
+jump0()
+}
+else
+document.write(message)
+</script>
+ 
+<p align="justify">Todos los rinocerontes son herbívoros y necesitan una gran cantidad de alimento diario para mantener su gran volumen. Pueden tolerar alimentos relativamente altos en fibra en su dieta, gracias a la capacidad de su colon de fermentar y digerir el tejido vegetal leñoso, pero prefieren partes más nutritivas y blandas cuando las hay disponibles. </p>
+
+<p align="justify">Las dos especies africanas de rinoceronte han perdido los dientes frontales, y aunque las especies asiáticas conservan incisivos (y el rinoceronte de Sumatra incluso caninos), estas piezas se han adaptado más para pelear que para la alimentación. Sin embargo, cada especie se ha adaptado al consumo de un tipo de materia vegetal. El rinoceronte negro tiene un labio superior prensil que utiliza para romper los extremos de las ramas de las plantas leñosas. El rinoceronte blanco, en cambio, cuenta con un cráneo alargado y unos labios anchos que utiliza para pastar las hierbas cortas. El rinoceronte indio también tiene un labio superior prensil, que usa para obtener hierbas altas y pequeños arbustos. </p>
+
+<p align="justify">Tanto el rinoceronte de Java como el de Sumatra, a menudo derriban pequeños árboles para comerse sus hojas y brotes, y todas las especies excepto el blanco incluyen algunos frutos en su dieta. Todos los rinocerontes beben casi a diario, pero en condiciones áridas pueden sobrevivir entre cuatro y cinco días sin beber. El rinoceronte indio pasa grandes periodos en el agua, mientras las especies africanas suelen preferir revolcarse en el barro. Si bien el agua los refresca, el barro los protege contra las picaduras de moscas y otros insectos.</p>
+
+<img src="https://media.giphy.com/media/2wN5OlLBhBzc4/giphy.gif">
+<br>
+<br>
+<button onclick="location.href='C:/Users/LENOVO/Desktop/Pagina Animales/Animales/Quetzal.html'" target="frmInferior">Anterior</button>
+<button onclick="location.href='C:/Users/LENOVO/Desktop/Pagina Animales/Frames/principal.html'" target="frmInferior">Principal</button>
+<button onclick="location.href='C:/Users/LENOVO/Desktop/Pagina Animales/Animales/Serpiente.html'" target="frmInferior">Siguiente</button>
+</center></font>
+</body>
+</html>

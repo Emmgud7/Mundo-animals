@@ -1,0 +1,230 @@
+<html>
+<head>
+	<title>Lobo</title>
+</head>
+<body>
+    <body bgcolor="palegreen">
+
+ <style>
+h1 {color:darkblue;}
+ </style>
+ <center>
+
+<FONT SIZE="7" FACE="Verdana"><SPAN ID="s"  STYLE=" position:absolute; color:white">LOBO</SPAN>
+	<SPAN ID="s2" STYLE=" position:absolute; color:white">LOBO</SPAN>
+	<SPAN ID="s3" STYLE=" position:absolute; color:white">LOBO</SPAN>
+	<SPAN ID="ds" STYLE=" position:relative; "></SPAN>
+	</FONT>
+	
+	<FONT COLOR="#0000FF" SIZE="6" FACE="Verdana">LOBO</FONT>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+y=0
+x=2
+z=1
+function l(){
+y+=1
+x+=1
+z+=1
+document.all.s.style.color="green";
+document.all.s.style.margin=y;
+document.all.s3.style.color="yellow";
+document.all.s3.style.margin=z;
+document.all.s2.style.color="red";
+document.all.s2.style.margin=x;
+
+if (y>3){
+y=0}
+if (z>3){
+z=0}
+if (x>3){
+x=0}
+setTimeout("l(),1")
+}
+
+l()
+
+</SCRIPT>
+
+<font FACE="rockwell" SIZE="4.8">
+<p align="justify">El lobo (Canis lupus) es una especie de mamífero placentario del orden de los carnívoros. El perro doméstico (Canis familiaris) se consideraba miembro de la misma especie según distintos indicios, la secuencia del ADN y otros estudios genéticos. Sin embargo, fue hasta 1758 que se consideró una especie distinta por el biólogo Carl Linneaus en la décima edición de Systema naturæ El primer registro fósil data de hace ochocientos mil años. Antaño los lobos fueron abundantes y se distribuían por Norteamérica y Eurasia. No obstante, por una serie de razones relacionadas con el hombre, los lobos habitan únicamente en una muy limitada porción del que antes fue su territorio.</p>
+
+<p align="justify">Aunque está clasificada como una especie poco amenazada de extinción en algunas regiones, incluyendo la parte continental de los Estados Unidos de América, la especie está listada como en peligro o amenazada. Los lobos son cazados en muchas áreas del mundo por la amenaza que representan para el ganado, así como por deporte.</p>
+
+<h1><center><b><font size=7><script language="JavaScript1.2">
+
+//Neon Lights Text II by G.P.F. (gpf@beta-cc.de)
+//visit http://www.beta-cc.de
+//Visit http://www.dynamicdrive.com for this script 
+
+var message2="HABITAT"
+var neonbasecolor="WHITE"
+var neontextcolor="limegreen"
+var neontextcolor2="#32CD32"
+var flashspeed=100						// speed of flashing in milliseconds
+var flashingletters=3						// number of letters flashing in neontextcolor
+var flashingletters2=1						// number of letters flashing in neontextcolor2 (0 to disable)
+var flashpause=0						// the pause between flash-cycles in milliseconds
+
+///No need to edit below this line/////
+
+var n=0
+if (document.all||document.getElementById){
+document.write('<font color="'+neonbasecolor+'">')
+for (m=0;m<message2.length;m++)
+document.write('<span id="neonlight'+m+'">'+message2.charAt(m)+'</span>')
+document.write('</font>')
+}
+else
+document.write(message2)
+
+function crossref(number){
+var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+return crossobj
+}
+
+function neon(){
+
+//Change all letters to base color
+if (n==0){
+for (m=0;m<message2.length;m++)
+crossref(m).style.color=neonbasecolor
+}
+
+//cycle through and change individual letters to neon color
+crossref(n).style.color=neontextcolor
+
+if (n>flashingletters-1) crossref(n-flashingletters).style.color=neontextcolor2 
+if (n>(flashingletters+flashingletters2)-1) crossref(n-flashingletters-flashingletters2).style.color=neonbasecolor
+
+
+if (n<message2.length-1)
+n++
+else{
+n=0
+clearInterval(flashing)
+setTimeout("beginneon()",flashpause)
+return
+}
+}
+
+function beginneon(){
+if (document.all||document.getElementById)
+flashing=setInterval("neon()",flashspeed)
+}
+beginneon()
+
+
+</script></h1></b></FONT>
+
+<p align="justify">Toda Norteamérica, Japón, Europa occidental, Rusia y la India, contaban con poblaciones de lobos en abundancia. A pesar de ello, de los antes mencionados, solo Rusia continúa manteniendo un elevado número de ejemplares.En América del Norte, ocupan el norte de Groenlandia, varias islas árticas y gran extensión de Canadá. Estados Unidos apenas conserva unas poblaciones fragmentadas y en México se conservan pocos individuos en cautiverio, ya que la caza y la destrucción del hábitat los redujeron a cifras alarmantes.</p>
+
+<p align="justify">Rusia, China, Kazajistán, Nepal y Mongolia son países con gran presencia de subespecies de lobos.En África y Oriente medio, se conservan de forma fragmentada, pero el lobo dorado africano (Canis anthus) es uno de los más distribuidos.</p>
+
+
+<script language="JavaScript1.2">
+
+/*
+Nudging text by Matthias (info@freejavascripts.f2s.com)
+Modified by Dynamic Drive to function in NS6
+For this script and more, visit http://www.dynamicdrive.com
+*/
+
+//configure message
+message="ALIMENTACIÓN"
+//animate text in NS6? (0 will turn it off)
+ns6switch=1
+
+var ns6=document.getElementById&&!document.all
+mes=new Array();
+mes[0]=-1;
+mes[1]=-4;
+mes[2]=-7;mes[3]=-10;
+mes[4]=-7;
+mes[5]=-4;
+mes[6]=-1;
+num=0;
+num2=0;
+txt="";
+function jump0(){
+if (ns6&&!ns6switch){
+jump.innerHTML=message
+return
+}
+if(message.length > 6){
+for(i=0; i != message.length;i++){
+txt=txt+"<span style='position:relative;' id='n"+i+"'>"+message.charAt(i)+"</span>"};
+jump.innerHTML=txt;
+txt="";
+jump1a()
+}
+else{
+alert("Your message is to short")
+}
+}
+
+function jump1a(){
+nfinal=(document.getElementById)? document.getElementById("n0") : document.all.n0
+nfinal.style.left=-num2;
+if(num2 != 9){
+num2=num2+3;
+setTimeout("jump1a()",50)
+}
+else{
+jump1b()
+}
+}
+
+function jump1b(){
+nfinal.style.left=-num2;
+if(num2 != 0){num2=num2-3;
+setTimeout("jump1b()",50)
+}
+else{
+jump2()
+}
+}
+
+function jump2(){
+txt="";
+for(i=0;i != message.length;i++){
+if(i+num > -1 && i+num < 7){
+txt=txt+"<span style='position:relative;top:"+mes[i+num]+"'>"+message.charAt(i)+"</span>"
+}
+else{txt=txt+"<span>"+message.charAt(i)+"</span>"}
+}
+jump.innerHTML=txt;
+txt="";
+if(num != (-message.length)){
+num--;
+setTimeout("jump2()",50)}
+else{num=0;
+setTimeout("jump0()",50)}}
+</script>
+</head>
+<body>
+
+<h1><div id="jumpx" style="color:RED"></div></h1>
+<script>
+if (document.all||document.getElementById){
+jump=(document.getElementById)? document.getElementById("jumpx") : document.all.jumpx
+jump0()
+}
+else
+document.write(message)
+</script>
+ 
+<p align="justify">El lobo gris es un cazador inteligente, por lo que la comida no será problema; su dieta se basa en ungulados tales como ovejas, cabras, cerdos, ciervos,  caballos, renos, alces, antílopes, rebecos y bisontes; sin embargo, cuando estos tipos de presas se tornan escasos, se les ve alimentarse de aves y roedores.</p>
+
+<p align="justify">Si bien su estrategia de caza es más simple respecto a la de los leones, la actuación de las manadas al momento de hacerse de su comida es bastante eficiente. Su inteligencia les permite esconderse de la presa para atacarle cuando esté desprevenida, así como hostigarla hasta el cansancio o darle captura luego de una intensa persecución.</p>
+
+<img src="https://acegif.com/wp-content/uploads/howling-wolf-m.gif">
+<br>
+<br>
+<button onclick="location.href='C:/Users/LENOVO/Desktop/Pagina Animales/Animales/Koala.html'" target="frmInferior">Anterior</button>
+<button onclick="location.href='C:/Users/LENOVO/Desktop/Pagina Animales/Frames/principal.html'" target="frmInferior">Principal</button>
+<button onclick="location.href='C:/Users/LENOVO/Desktop/Pagina Animales/Animales/Medusa.html'" target="frmInferior">Siguiente</button>
+</center></font>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<html>
+<head>
+	<title>Oca</title>
+</head>
+<body>
+    <body bgcolor="palegreen">
+
+ <style>
+h1 {color:darkblue;}
+ </style>
+ <center>
+
+<FONT SIZE="7" FACE="Verdana"><SPAN ID="s"  STYLE=" position:absolute; color:white">OCA</SPAN>
+	<SPAN ID="s2" STYLE=" position:absolute; color:white">OCA</SPAN>
+	<SPAN ID="s3" STYLE=" position:absolute; color:white">OCA</SPAN>
+	<SPAN ID="ds" STYLE=" position:relative; "></SPAN>
+	</FONT>
+	
+	<FONT COLOR="#0000FF" SIZE="6" FACE="Verdana">OCA</FONT>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+y=0
+x=2
+z=1
+function l(){
+y+=1
+x+=1
+z+=1
+document.all.s.style.color="green";
+document.all.s.style.margin=y;
+document.all.s3.style.color="yellow";
+document.all.s3.style.margin=z;
+document.all.s2.style.color="red";
+document.all.s2.style.margin=x;
+
+if (y>3){
+y=0}
+if (z>3){
+z=0}
+if (x>3){
+x=0}
+setTimeout("l(),1")
+}
+
+l()
+
+</SCRIPT>
+
+<font FACE="rockwell" SIZE="4.8">
+<p align="justify">El ánsar común, ganso común u oca común, es una especie de ave anseriforme de la familia Anatidae autóctona de Eurasia y el norte de África. Esta especie es el ancestro silvestre de las ocas domésticas de Europa. Los gansos domésticos se han asilvestrado y extendido en otras partes del mundo, como en Australia.</p>
+
+<p align="justify">El ánsar común es el más grande y robusto de los gansos del género Anser. Se caracteriza por su cuerpo voluminoso, su largo cuello y su pico grueso y de color naranja o rosado, mientras que sus patas son rosadas. Mide entre 74 y 91 cm de largo, con una longitud de alas de entre 41,2 y 48 cm, lo que le confiere una envergadura alar de entre 147 y 180 cm. Su cola mide entre 6,2 y 6,9 cm, su pico mide entre 6,4 y 6,9 cm de largo, y su tarsos entre 7,1 y 9,3 cm. Suele pesar entre 2,16 y 4,56 kg, con una media alrededor de 3,3 kg. Los machos suelen ser más grandes que las hembras, siendo el dimorfismo sexual más pronunciado en la subespecie oriental rubirostris, que además es más grande de media que la subespecie nominal.</p>
+
+<h1><center><b><font size=7><script language="JavaScript1.2">
+
+//Neon Lights Text II by G.P.F. (gpf@beta-cc.de)
+//visit http://www.beta-cc.de
+//Visit http://www.dynamicdrive.com for this script 
+
+var message2="HABITAT"
+var neonbasecolor="WHITE"
+var neontextcolor="limegreen"
+var neontextcolor2="#32CD32"
+var flashspeed=100						// speed of flashing in milliseconds
+var flashingletters=3						// number of letters flashing in neontextcolor
+var flashingletters2=1						// number of letters flashing in neontextcolor2 (0 to disable)
+var flashpause=0						// the pause between flash-cycles in milliseconds
+
+///No need to edit below this line/////
+
+var n=0
+if (document.all||document.getElementById){
+document.write('<font color="'+neonbasecolor+'">')
+for (m=0;m<message2.length;m++)
+document.write('<span id="neonlight'+m+'">'+message2.charAt(m)+'</span>')
+document.write('</font>')
+}
+else
+document.write(message2)
+
+function crossref(number){
+var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+return crossobj
+}
+
+function neon(){
+
+//Change all letters to base color
+if (n==0){
+for (m=0;m<message2.length;m++)
+crossref(m).style.color=neonbasecolor
+}
+
+//cycle through and change individual letters to neon color
+crossref(n).style.color=neontextcolor
+
+if (n>flashingletters-1) crossref(n-flashingletters).style.color=neontextcolor2 
+if (n>(flashingletters+flashingletters2)-1) crossref(n-flashingletters-flashingletters2).style.color=neonbasecolor
+
+
+if (n<message2.length-1)
+n++
+else{
+n=0
+clearInterval(flashing)
+setTimeout("beginneon()",flashpause)
+return
+}
+}
+
+function beginneon(){
+if (document.all||document.getElementById)
+flashing=setInterval("neon()",flashspeed)
+}
+beginneon()
+
+
+</script></h1></b></FONT>
+
+<p align="justify">Este animales tienen la cualidad de poder pastorear, por lo cual suelen alimentarse de pasto y de cualquier otro tipo de hierbas que haya a su alrededor. También suelen comer una gran variedad de semillas, por lo cual resultan sumamente fáciles de criar en granjas.Estas aves de granja también requieren de una gran cantidad de fibras, por lo cual se les suele alimentar con una variedad de forrajes. Las ocas pueden comer una gran variedad de alimentos altos en fibra, ya que cuentan con un sistema digestivo resistente.</p>
+
+<p align="justify">Las ocas salvajes suelen alimentarse de plantas acuáticas y de una gran variedad de semillas. En ocasiones, visitan campos de maíz o de algún otro tipo de cereal para hacerse con restos de este tipo de alimentos.</p>
+
+
+<script language="JavaScript1.2">
+
+/*
+Nudging text by Matthias (info@freejavascripts.f2s.com)
+Modified by Dynamic Drive to function in NS6
+For this script and more, visit http://www.dynamicdrive.com
+*/
+
+//configure message
+message="ALIMENTACIÓN"
+//animate text in NS6? (0 will turn it off)
+ns6switch=1
+
+var ns6=document.getElementById&&!document.all
+mes=new Array();
+mes[0]=-1;
+mes[1]=-4;
+mes[2]=-7;mes[3]=-10;
+mes[4]=-7;
+mes[5]=-4;
+mes[6]=-1;
+num=0;
+num2=0;
+txt="";
+function jump0(){
+if (ns6&&!ns6switch){
+jump.innerHTML=message
+return
+}
+if(message.length > 6){
+for(i=0; i != message.length;i++){
+txt=txt+"<span style='position:relative;' id='n"+i+"'>"+message.charAt(i)+"</span>"};
+jump.innerHTML=txt;
+txt="";
+jump1a()
+}
+else{
+alert("Your message is to short")
+}
+}
+
+function jump1a(){
+nfinal=(document.getElementById)? document.getElementById("n0") : document.all.n0
+nfinal.style.left=-num2;
+if(num2 != 9){
+num2=num2+3;
+setTimeout("jump1a()",50)
+}
+else{
+jump1b()
+}
+}
+
+function jump1b(){
+nfinal.style.left=-num2;
+if(num2 != 0){num2=num2-3;
+setTimeout("jump1b()",50)
+}
+else{
+jump2()
+}
+}
+
+function jump2(){
+txt="";
+for(i=0;i != message.length;i++){
+if(i+num > -1 && i+num < 7){
+txt=txt+"<span style='position:relative;top:"+mes[i+num]+"'>"+message.charAt(i)+"</span>"
+}
+else{txt=txt+"<span>"+message.charAt(i)+"</span>"}
+}
+jump.innerHTML=txt;
+txt="";
+if(num != (-message.length)){
+num--;
+setTimeout("jump2()",50)}
+else{num=0;
+setTimeout("jump0()",50)}}
+</script>
+</head>
+<body>
+
+<h1><div id="jumpx" style="color:RED"></div></h1>
+<script>
+if (document.all||document.getElementById){
+jump=(document.getElementById)? document.getElementById("jumpx") : document.all.jumpx
+jump0()
+}
+else
+document.write(message)
+</script>
+ 
+<p align="justify">Las ocas son aves migratorias que se adaptan a los mejores ambientes del mundo. Las mismas suelen preferir lugares tropicales y con abundante agua. Normalmente, suelen ubicarse en el continente asiático y en países cercanos a Rusia. Además, suelen viajar a Europa cuando se presentan temperaturas muy frías donde viven.</p>
+
+<p align="justify">Esta ave de granja se adapta fácilmente a los ambientes de las granjas, ya que las mismas les brindan todas las propiedades para subsistir. Además, los encargados de estos lugares siempre les dan las protecciones necesarias y un ambiente favorable para su supervivencia.</p>
+
+<p align="justify">Los países donde suelen ser criadas estas aves son Asia y Europa. Este último principalmente por ser una región donde se consume mucho las carnes e hígados de las ocas. Por otra parte, las ocas son mayormente vistas en Australia, donde hay una gran cantidad de criaderos de este tipo de aves.</p>
+
+<img src="https://gifmaniacos.es/wp-content/uploads/2016/04/aves-gif-4.gif">
+<br>
+<br>
+<button onclick="location.href='C:/Users/LENOVO/Desktop/Pagina Animales/Animales/Ñandu.html'" target="frmInferior">Anterior</button>
+<button onclick="location.href='C:/Users/LENOVO/Desktop/Pagina Animales/Frames/principal.html'" target="frmInferior">Principal</button>
+<button onclick="location.href='C:/Users/LENOVO/Desktop/Pagina Animales/Animales/Puma.html'" target="frmInferior">Siguiente</button>
+</center></font>
+</body>
+</html>

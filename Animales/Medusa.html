@@ -1,0 +1,232 @@
+<html>
+<head>
+	<title>Medusa</title>
+</head>
+<body>
+    <body bgcolor="palegreen">
+
+ <style>
+h1 {color:darkblue;}
+ </style>
+ <center>
+
+<FONT SIZE="7" FACE="Verdana"><SPAN ID="s"  STYLE=" position:absolute; color:white">MEDUSA</SPAN>
+	<SPAN ID="s2" STYLE=" position:absolute; color:white">MEDUSA</SPAN>
+	<SPAN ID="s3" STYLE=" position:absolute; color:white">MEDUSA</SPAN>
+	<SPAN ID="ds" STYLE=" position:relative; "></SPAN>
+	</FONT>
+	
+	<FONT COLOR="#0000FF" SIZE="6" FACE="Verdana">MEDUSA</FONT>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+y=0
+x=2
+z=1
+function l(){
+y+=1
+x+=1
+z+=1
+document.all.s.style.color="green";
+document.all.s.style.margin=y;
+document.all.s3.style.color="yellow";
+document.all.s3.style.margin=z;
+document.all.s2.style.color="red";
+document.all.s2.style.margin=x;
+
+if (y>3){
+y=0}
+if (z>3){
+z=0}
+if (x>3){
+x=0}
+setTimeout("l(),1")
+}
+
+l()
+
+</SCRIPT>
+
+<font FACE="rockwell" SIZE="4.8">
+<p align="justify">Las medusas (Medusozoa), también llamadas aguamalas, malaguas, aguavivas, aguacuajito, aguacuajada, o lágrimas de mar, son animales marinos pertenecientes al filo Cnidaria (más conocidos como celentéreos); son pelágicos, de cuerpo gelatinoso, con forma de campana de la que cuelga un manubrio tubular, con la boca en el extremo inferior, a veces prolongado por largos tentáculos cargados con células urticantes llamados cnidocitos. Aparecieron hace unos 500 millones de años en el Cámbrico.</p>
+
+<p align="justify">Para desplazarse por el agua se impulsan por contracciones rítmicas de todo su cuerpo; toman agua, que se introduce en su cavidad gastrovascular, y la expulsan usándola como "propulsor".El concepto de medusa es tanto taxonómico como morfológico. Muchos cnidarios tienen una alternancia de generaciones, con pólipos sésiles que se reproducen asexualmente y medusas pelágicas que llevan a cabo la reproducción sexual.</p>
+
+<h1><center><b><font size=7><script language="JavaScript1.2">
+
+//Neon Lights Text II by G.P.F. (gpf@beta-cc.de)
+//visit http://www.beta-cc.de
+//Visit http://www.dynamicdrive.com for this script 
+
+var message2="HABITAT"
+var neonbasecolor="WHITE"
+var neontextcolor="limegreen"
+var neontextcolor2="#32CD32"
+var flashspeed=100						// speed of flashing in milliseconds
+var flashingletters=3						// number of letters flashing in neontextcolor
+var flashingletters2=1						// number of letters flashing in neontextcolor2 (0 to disable)
+var flashpause=0						// the pause between flash-cycles in milliseconds
+
+///No need to edit below this line/////
+
+var n=0
+if (document.all||document.getElementById){
+document.write('<font color="'+neonbasecolor+'">')
+for (m=0;m<message2.length;m++)
+document.write('<span id="neonlight'+m+'">'+message2.charAt(m)+'</span>')
+document.write('</font>')
+}
+else
+document.write(message2)
+
+function crossref(number){
+var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+return crossobj
+}
+
+function neon(){
+
+//Change all letters to base color
+if (n==0){
+for (m=0;m<message2.length;m++)
+crossref(m).style.color=neonbasecolor
+}
+
+//cycle through and change individual letters to neon color
+crossref(n).style.color=neontextcolor
+
+if (n>flashingletters-1) crossref(n-flashingletters).style.color=neontextcolor2 
+if (n>(flashingletters+flashingletters2)-1) crossref(n-flashingletters-flashingletters2).style.color=neonbasecolor
+
+
+if (n<message2.length-1)
+n++
+else{
+n=0
+clearInterval(flashing)
+setTimeout("beginneon()",flashpause)
+return
+}
+}
+
+function beginneon(){
+if (document.all||document.getElementById)
+flashing=setInterval("neon()",flashspeed)
+}
+beginneon()
+
+
+</script></h1></b></FONT>
+
+<p align="justify">Por lo general, el hábitat de las medusas es en el mar aunque hay algunas especies que se encuentran en el agua dulce como por ejemplo las Hydromedusae, entre ellas destacan la medusa cosmopolita de agua dulce.</p>
+
+<p align="justify">Igualmente, las medusas pueden tanto vivir en las zonas altas donde se encuentra el plancton como en lugares más profundos del mar donde buscarán alimentarse de otros microorganismos.</p>
+
+<p align="justify">También hay medusas que no viven el mar, sino que se encuentran en el fondo de los ríos o lagos que son poco profundos. No obstante, las medusas pueden ubicarse desde las cálidas aguas tropicales del océano Pacífico e Índico hasta el frio ártico.</p>
+
+<script language="JavaScript1.2">
+
+/*
+Nudging text by Matthias (info@freejavascripts.f2s.com)
+Modified by Dynamic Drive to function in NS6
+For this script and more, visit http://www.dynamicdrive.com
+*/
+
+//configure message
+message="ALIMENTACIÓN"
+//animate text in NS6? (0 will turn it off)
+ns6switch=1
+
+var ns6=document.getElementById&&!document.all
+mes=new Array();
+mes[0]=-1;
+mes[1]=-4;
+mes[2]=-7;mes[3]=-10;
+mes[4]=-7;
+mes[5]=-4;
+mes[6]=-1;
+num=0;
+num2=0;
+txt="";
+function jump0(){
+if (ns6&&!ns6switch){
+jump.innerHTML=message
+return
+}
+if(message.length > 6){
+for(i=0; i != message.length;i++){
+txt=txt+"<span style='position:relative;' id='n"+i+"'>"+message.charAt(i)+"</span>"};
+jump.innerHTML=txt;
+txt="";
+jump1a()
+}
+else{
+alert("Your message is to short")
+}
+}
+
+function jump1a(){
+nfinal=(document.getElementById)? document.getElementById("n0") : document.all.n0
+nfinal.style.left=-num2;
+if(num2 != 9){
+num2=num2+3;
+setTimeout("jump1a()",50)
+}
+else{
+jump1b()
+}
+}
+
+function jump1b(){
+nfinal.style.left=-num2;
+if(num2 != 0){num2=num2-3;
+setTimeout("jump1b()",50)
+}
+else{
+jump2()
+}
+}
+
+function jump2(){
+txt="";
+for(i=0;i != message.length;i++){
+if(i+num > -1 && i+num < 7){
+txt=txt+"<span style='position:relative;top:"+mes[i+num]+"'>"+message.charAt(i)+"</span>"
+}
+else{txt=txt+"<span>"+message.charAt(i)+"</span>"}
+}
+jump.innerHTML=txt;
+txt="";
+if(num != (-message.length)){
+num--;
+setTimeout("jump2()",50)}
+else{num=0;
+setTimeout("jump0()",50)}}
+</script>
+</head>
+<body>
+
+<h1><div id="jumpx" style="color:RED"></div></h1>
+<script>
+if (document.all||document.getElementById){
+jump=(document.getElementById)? document.getElementById("jumpx") : document.all.jumpx
+jump0()
+}
+else
+document.write(message)
+</script>
+ 
+<p align="justify">Las medusas se alimentan con plancton, así como también con diversos microorganismos y organismos como pueden ser crustáceos, peces muy pequeños, huevos de peces y también se alimentan de otras medusas.</p>
+
+<p align="justify">De esta manera, las medusas son animales carnívoros, además para poder ingerir sus presas usan el agujero que tienen situado en el centro de su campana por medio de sus tentáculos.
+Para atrapar a sus presas utilizan sus tentáculos como una red, ya que así los cazan de manera pasiva y a su vez también mientras nadan cazan su alimento debido a que su desplazamiento hace que sea mucho más fácil.</p>
+
+<img src="https://i.pinimg.com/originals/41/f0/08/41f0088684d946483cfa5c6152102fd6.gif">
+<br>
+<br>
+<button onclick="location.href='C:/Users/LENOVO/Desktop/Pagina Animales/Animales/Lobo.html'" target="frmInferior">Anterior</button>
+<button onclick="location.href='C:/Users/LENOVO/Desktop/Pagina Animales/Frames/principal.html'" target="frmInferior">Principal</button>
+<button onclick="location.href='C:/Users/LENOVO/Desktop/Pagina Animales/Animales/Ninfa.html'" target="frmInferior">Siguiente</button>
+</center></font>
+</body>
+</html>

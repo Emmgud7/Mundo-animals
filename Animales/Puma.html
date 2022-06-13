@@ -1,0 +1,232 @@
+<html>
+<head>
+	<title>Puma</title>
+</head>
+<body>
+    <body bgcolor="palegreen">
+
+ <style>
+h1 {color:darkblue;}
+ </style>
+ <center>
+
+<FONT SIZE="7" FACE="Verdana"><SPAN ID="s"  STYLE=" position:absolute; color:white">PUMA</SPAN>
+	<SPAN ID="s2" STYLE=" position:absolute; color:white">PUMA</SPAN>
+	<SPAN ID="s3" STYLE=" position:absolute; color:white">PUMA</SPAN>
+	<SPAN ID="ds" STYLE=" position:relative; "></SPAN>
+	</FONT>
+	
+	<FONT COLOR="#0000FF" SIZE="6" FACE="Verdana">PUMA</FONT>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+y=0
+x=2
+z=1
+function l(){
+y+=1
+x+=1
+z+=1
+document.all.s.style.color="green";
+document.all.s.style.margin=y;
+document.all.s3.style.color="yellow";
+document.all.s3.style.margin=z;
+document.all.s2.style.color="red";
+document.all.s2.style.margin=x;
+
+if (y>3){
+y=0}
+if (z>3){
+z=0}
+if (x>3){
+x=0}
+setTimeout("l(),1")
+}
+
+l()
+
+</SCRIPT>
+
+<font FACE="rockwell" SIZE="4.8">
+<p align="justify">El puma, león de montaña o león americano (Nombre científico: Puma concolor) es un mamífero carnívoro de la familia Felidae nativo de América. </p>
+
+<p align="justify">Como cazador y depredador de emboscada, el puma obtiene una amplia variedad de presas. Su principal alimento son los ungulados como el ciervo, en particular en la parte septentrional de su área de distribución, pero también caza camélidos como el guanaco y especies tan pequeñas como insectos y roedores. Prefiere hábitat con vegetación densa durante las horas de acecho, pero puede vivir en zonas abiertas. El puma es territorial y tiene una baja densidad de población. La extensión de su territorio depende de la vegetación y de la abundancia de presas. Aunque es un gran depredador, no siempre es la especie dominante en su área de distribución, como cuando compite con otros depredadores como el jaguar. Se trata de un felino solitario que por lo general evita a las personas. Los ataques a seres humanos son raros, aunque su frecuencia ha aumentado en los últimos años.</p>
+
+<h1><center><b><font size=7><script language="JavaScript1.2">
+
+//Neon Lights Text II by G.P.F. (gpf@beta-cc.de)
+//visit http://www.beta-cc.de
+//Visit http://www.dynamicdrive.com for this script 
+
+var message2="HABITAT"
+var neonbasecolor="WHITE"
+var neontextcolor="limegreen"
+var neontextcolor2="#32CD32"
+var flashspeed=100						// speed of flashing in milliseconds
+var flashingletters=3						// number of letters flashing in neontextcolor
+var flashingletters2=1						// number of letters flashing in neontextcolor2 (0 to disable)
+var flashpause=0						// the pause between flash-cycles in milliseconds
+
+///No need to edit below this line/////
+
+var n=0
+if (document.all||document.getElementById){
+document.write('<font color="'+neonbasecolor+'">')
+for (m=0;m<message2.length;m++)
+document.write('<span id="neonlight'+m+'">'+message2.charAt(m)+'</span>')
+document.write('</font>')
+}
+else
+document.write(message2)
+
+function crossref(number){
+var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+return crossobj
+}
+
+function neon(){
+
+//Change all letters to base color
+if (n==0){
+for (m=0;m<message2.length;m++)
+crossref(m).style.color=neonbasecolor
+}
+
+//cycle through and change individual letters to neon color
+crossref(n).style.color=neontextcolor
+
+if (n>flashingletters-1) crossref(n-flashingletters).style.color=neontextcolor2 
+if (n>(flashingletters+flashingletters2)-1) crossref(n-flashingletters-flashingletters2).style.color=neonbasecolor
+
+
+if (n<message2.length-1)
+n++
+else{
+n=0
+clearInterval(flashing)
+setTimeout("beginneon()",flashpause)
+return
+}
+}
+
+function beginneon(){
+if (document.all||document.getElementById)
+flashing=setInterval("neon()",flashspeed)
+}
+beginneon()
+
+
+</script></h1></b></FONT>
+
+<p align="justify">La distribución de este felino comprende todo el continente americano, ya que su facilidad de adaptación le permite vivir en prácticamente cualquier hábitat. Es posible hallarlos desde el norte de Canadá hasta el sur de la Cordillera de los Andes. Los hábitats del puma son los bosques, tierras bajas y desiertos montañosos; el animal tiene preferencia por zonas con vegetación densa, aunque también vive en regiones con poca vegetación. Principalmente se encuentra en cañones, selvas, terrenos rocosos y escarpes.</p>
+
+<p align="justify">La extensión de su territorio varía considerablemente, siendo de alrededor de 25 km² el de las hembras y entre 150-1000 km² el de los machos. Éstos pueden superponerse entre hembras, o machos y hembras, aunque nunca entre machos para evitar conflictos entre ellos. Además, el marcado de territorio se realiza mediante heces, orina y arañazos.</p>
+
+
+<script language="JavaScript1.2">
+
+/*
+Nudging text by Matthias (info@freejavascripts.f2s.com)
+Modified by Dynamic Drive to function in NS6
+For this script and more, visit http://www.dynamicdrive.com
+*/
+
+//configure message
+message="ALIMENTACIÓN"
+//animate text in NS6? (0 will turn it off)
+ns6switch=1
+
+var ns6=document.getElementById&&!document.all
+mes=new Array();
+mes[0]=-1;
+mes[1]=-4;
+mes[2]=-7;mes[3]=-10;
+mes[4]=-7;
+mes[5]=-4;
+mes[6]=-1;
+num=0;
+num2=0;
+txt="";
+function jump0(){
+if (ns6&&!ns6switch){
+jump.innerHTML=message
+return
+}
+if(message.length > 6){
+for(i=0; i != message.length;i++){
+txt=txt+"<span style='position:relative;' id='n"+i+"'>"+message.charAt(i)+"</span>"};
+jump.innerHTML=txt;
+txt="";
+jump1a()
+}
+else{
+alert("Your message is to short")
+}
+}
+
+function jump1a(){
+nfinal=(document.getElementById)? document.getElementById("n0") : document.all.n0
+nfinal.style.left=-num2;
+if(num2 != 9){
+num2=num2+3;
+setTimeout("jump1a()",50)
+}
+else{
+jump1b()
+}
+}
+
+function jump1b(){
+nfinal.style.left=-num2;
+if(num2 != 0){num2=num2-3;
+setTimeout("jump1b()",50)
+}
+else{
+jump2()
+}
+}
+
+function jump2(){
+txt="";
+for(i=0;i != message.length;i++){
+if(i+num > -1 && i+num < 7){
+txt=txt+"<span style='position:relative;top:"+mes[i+num]+"'>"+message.charAt(i)+"</span>"
+}
+else{txt=txt+"<span>"+message.charAt(i)+"</span>"}
+}
+jump.innerHTML=txt;
+txt="";
+if(num != (-message.length)){
+num--;
+setTimeout("jump2()",50)}
+else{num=0;
+setTimeout("jump0()",50)}}
+</script>
+</head>
+<body>
+
+<h1><div id="jumpx" style="color:RED"></div></h1>
+<script>
+if (document.all||document.getElementById){
+jump=(document.getElementById)? document.getElementById("jumpx") : document.all.jumpx
+jump0()
+}
+else
+document.write(message)
+</script>
+ 
+<p align="justify">La dieta del puma es exclusivamente carnívora, alimentándose desde insectos hasta ungulados de gran tamaño. Principalmente se alimentan de venados, como los ciervos y alces en un 30-60%. También puede cazar cerdos, armadillos, ganado, chigüire, ratones, puercoespines, liebres, aves y reptiles.</p>
+
+<p align="justify">El método de caza principal es mediante una emboscada. Para ello se esconde entre árboles y repisas, aguarda a sus presas y saltan hacia ellos para morderlos en el cuello. Además, pueden llegar a correr 70 km/h en el caso de que su presa quiera escapar.</p>
+
+<p align="justify">Según las estimaciones, los pumas ingieren alrededor de 4 kilogramos de carne diarios y son capaces de cazar al menos un gran ungulado cada dos semanas. En dicho caso, las sobras del animal las arrastra y esconde en su lugar de preferencia, para alimentarse de él en días posteriores.</p>
+
+<img src="https://c.tenor.com/yRxsmkbjDHYAAAAC/feed-me-puma.gif">
+<br>
+<br>
+<button onclick="location.href='C:/Users/LENOVO/Desktop/Pagina Animales/Animales/Oca.html'" target="frmInferior">Anterior</button>
+<button onclick="location.href='C:/Users/LENOVO/Desktop/Pagina Animales/Frames/principal.html'" target="frmInferior">Principal</button>
+<button onclick="location.href='C:/Users/LENOVO/Desktop/Pagina Animales/Animales/Quetzal.html'" target="frmInferior">Siguiente</button>
+</center></font>
+</body>
+</html>

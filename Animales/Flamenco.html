@@ -1,0 +1,228 @@
+<html>
+<head>
+	<title>Flamenco</title>
+</head>
+<body>
+    <body bgcolor="palegreen">
+
+ <style>
+h1 {color:darkblue;}
+ </style>
+ <center>
+
+<FONT SIZE="7" FACE="Verdana"><SPAN ID="s"  STYLE=" position:absolute; color:white">FLAMENCOS</SPAN>
+	<SPAN ID="s2" STYLE=" position:absolute; color:white">FLAMENCOS</SPAN>
+	<SPAN ID="s3" STYLE=" position:absolute; color:white">FLAMENCOS</SPAN>
+	<SPAN ID="ds" STYLE=" position:relative; "></SPAN>
+	</FONT>
+	
+	<FONT COLOR="#0000FF" SIZE="6" FACE="Verdana">FLAMENCOS</FONT>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+y=0
+x=2
+z=1
+function l(){
+y+=1
+x+=1
+z+=1
+document.all.s.style.color="green";
+document.all.s.style.margin=y;
+document.all.s3.style.color="yellow";
+document.all.s3.style.margin=z;
+document.all.s2.style.color="red";
+document.all.s2.style.margin=x;
+
+if (y>3){
+y=0}
+if (z>3){
+z=0}
+if (x>3){
+x=0}
+setTimeout("l(),1")
+}
+
+l()
+
+</SCRIPT>
+
+<font FACE="rockwell" SIZE="4.8">
+<p align="justify">Los flamencos mayores (Phoenicopterus) son un género de aves neognatas de la familia Phoenicopteridae. Son aves que se distribuyen tanto por el hemisferio occidental como por el hemisferio oriental; existen dos especies en América y una en el Viejo Mundo. Tienen el cráneo desmognato holorrino, con dieciséis a veinte vértebras cervicales y pies anisodáctilos.</p>
+
+<p align="justify">Se trata de aves muy esbeltas, de entre 80 cm y 1,40 m de largo, con patas muy largas y cuello largo. El pico es muy característico y perfectamente adaptado para hurgar en el barro. La mandíbula superior es de menor tamaño que la inferior que es la única móvil. El pico tiene una pronunciada curvatura hacia abajo y está dotado de unas laminillas internas para retener las sustancias alimenticias al filtrar el limo. Los pies tienen cuatro dedos, los tres delanteros unidos por una membrana y el posterior muy pequeño.
+Todas las especies son de color rosa más o menos fuerte, desde el rosa claro casi blanco del flamenco europeo (Phoenicopterus roseus), hasta el color salmón del flamenco del Caribe (Phoenicopterus ruber).
+Mientras vuelan mantienen el cuello y las patas completamente estiradas.</p>
+
+<h1><center><b><font size=7><script language="JavaScript1.2">
+
+//Neon Lights Text II by G.P.F. (gpf@beta-cc.de)
+//visit http://www.beta-cc.de
+//Visit http://www.dynamicdrive.com for this script 
+
+var message2="HABITAT"
+var neonbasecolor="WHITE"
+var neontextcolor="limegreen"
+var neontextcolor2="#32CD32"
+var flashspeed=100						// speed of flashing in milliseconds
+var flashingletters=3						// number of letters flashing in neontextcolor
+var flashingletters2=1						// number of letters flashing in neontextcolor2 (0 to disable)
+var flashpause=0						// the pause between flash-cycles in milliseconds
+
+///No need to edit below this line/////
+
+var n=0
+if (document.all||document.getElementById){
+document.write('<font color="'+neonbasecolor+'">')
+for (m=0;m<message2.length;m++)
+document.write('<span id="neonlight'+m+'">'+message2.charAt(m)+'</span>')
+document.write('</font>')
+}
+else
+document.write(message2)
+
+function crossref(number){
+var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+return crossobj
+}
+
+function neon(){
+
+//Change all letters to base color
+if (n==0){
+for (m=0;m<message2.length;m++)
+crossref(m).style.color=neonbasecolor
+}
+
+//cycle through and change individual letters to neon color
+crossref(n).style.color=neontextcolor
+
+if (n>flashingletters-1) crossref(n-flashingletters).style.color=neontextcolor2 
+if (n>(flashingletters+flashingletters2)-1) crossref(n-flashingletters-flashingletters2).style.color=neonbasecolor
+
+
+if (n<message2.length-1)
+n++
+else{
+n=0
+clearInterval(flashing)
+setTimeout("beginneon()",flashpause)
+return
+}
+}
+
+function beginneon(){
+if (document.all||document.getElementById)
+flashing=setInterval("neon()",flashspeed)
+}
+beginneon()
+
+
+</script></h1></b></FONT>
+
+<p align="justify">La distribución de los flamencos abarca América, África, Asia y Europa, es decir, viven en la mayoría de los continentes salvo Oceanía y Antártida. Con su bello plumaje, estas aves de largas patas se pasean a través del Viejo y el Nuevo Mundo. En el primero existen dos especies: el flamenco común (Phoenicopterus roseus) y el flamenco enano (Phoenicopterus minor), y en América se presentan 4 especies, que son el flamenco chileno (Phoenicopterus chilensis), el flamenco andino (Phoenicopterus andinus), el flamenco del Caribe (Phoenicopterus ruber) y el flamenco de James (Phoenicoparrus jamesi).</p>
+
+
+<script language="JavaScript1.2">
+
+/*
+Nudging text by Matthias (info@freejavascripts.f2s.com)
+Modified by Dynamic Drive to function in NS6
+For this script and more, visit http://www.dynamicdrive.com
+*/
+
+//configure message
+message="ALIMENTACIÓN"
+//animate text in NS6? (0 will turn it off)
+ns6switch=1
+
+var ns6=document.getElementById&&!document.all
+mes=new Array();
+mes[0]=-1;
+mes[1]=-4;
+mes[2]=-7;mes[3]=-10;
+mes[4]=-7;
+mes[5]=-4;
+mes[6]=-1;
+num=0;
+num2=0;
+txt="";
+function jump0(){
+if (ns6&&!ns6switch){
+jump.innerHTML=message
+return
+}
+if(message.length > 6){
+for(i=0; i != message.length;i++){
+txt=txt+"<span style='position:relative;' id='n"+i+"'>"+message.charAt(i)+"</span>"};
+jump.innerHTML=txt;
+txt="";
+jump1a()
+}
+else{
+alert("Your message is to short")
+}
+}
+
+function jump1a(){
+nfinal=(document.getElementById)? document.getElementById("n0") : document.all.n0
+nfinal.style.left=-num2;
+if(num2 != 9){
+num2=num2+3;
+setTimeout("jump1a()",50)
+}
+else{
+jump1b()
+}
+}
+
+function jump1b(){
+nfinal.style.left=-num2;
+if(num2 != 0){num2=num2-3;
+setTimeout("jump1b()",50)
+}
+else{
+jump2()
+}
+}
+
+function jump2(){
+txt="";
+for(i=0;i != message.length;i++){
+if(i+num > -1 && i+num < 7){
+txt=txt+"<span style='position:relative;top:"+mes[i+num]+"'>"+message.charAt(i)+"</span>"
+}
+else{txt=txt+"<span>"+message.charAt(i)+"</span>"}
+}
+jump.innerHTML=txt;
+txt="";
+if(num != (-message.length)){
+num--;
+setTimeout("jump2()",50)}
+else{num=0;
+setTimeout("jump0()",50)}}
+</script>
+</head>
+<body>
+
+<h1><div id="jumpx" style="color:RED"></div></h1>
+<script>
+if (document.all||document.getElementById){
+jump=(document.getElementById)? document.getElementById("jumpx") : document.all.jumpx
+jump0()
+}
+else
+document.write(message)
+</script>
+<p align="justify">Los flamencos se alimentan, mediante filtración, de crustáceos y algas. Sus picos, extrañamente formados, se adaptaron para separar el barro de la comida que consumen, y los usan singularmente al revés. La filtración de comida se apoya en estructuras filamentosas llamadas lamelas, pequeñas láminas que están en las mandíbulas y una lengua áspera y grande.</p>
+
+<p align="justify">La dieta de los flamencos se basa sobre todo en algas verdeazules (también conocidas como cianobacterias), diatomeas, pequeños insectos, crustáceos, peces, moluscos, larvas de moscas de salmuera y algunos seres vivos microscópicos más que pueden conformar plancton, pero cada especie cuenta con hábitos alimenticios específicos. Por lo regular, los flamencos de menor tamaño consumen alimentos más pequeños, y los individuos de especies grandes, como los del flamenco común, están anatómicamente facultados para meter a su pico alimentos mayores como crustáceos y moluscos.</p>
+<img src="https://i.gifer.com/origin/9a/9a753fbd02cb3788dea0d95c6ea9348c.gif">
+<br>
+<br>
+<button onclick="location.href='C:/Users/LENOVO/Desktop/Pagina Animales/Animales/Escarabajo.html'" target="frmInferior">Anterior</button>
+<button onclick="location.href='C:/Users/LENOVO/Desktop/Pagina Animales/Frames/principal.html'" target="frmInferior">Principal</button>
+<button onclick="location.href='C:/Users/LENOVO/Desktop/Pagina Animales/Animales/Gacelas.html'" target="frmInferior">Siguiente</button>
+</center></font>
+</body>
+</html>
